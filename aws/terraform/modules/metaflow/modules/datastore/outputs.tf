@@ -28,20 +28,20 @@ output "database_password" {
   description = "The database password"
 }
 
-output "iam_s3_access_role_arn" {
-  value       = aws_iam_role.iam_s3_access_role.arn
-  description = "The ARN of the access role that grants access to S3 and surrounding services"
-}
+# output "iam_s3_access_role_arn" {
+#   value       = aws_iam_role.iam_s3_access_role.arn
+#   description = "The ARN of the access role that grants access to S3 and surrounding services"
+# }
 
-output "metaflow_s3_policy_arn" {
-  value       = aws_iam_policy.s3_access.arn
-  description = "Policy grants access to the Metaflow S3 bucket used for blob storage by the Datastore"
-}
+# output "metaflow_s3_policy_arn" {
+#   value       = aws_iam_policy.s3_access.arn
+#   description = "Policy grants access to the Metaflow S3 bucket used for blob storage by the Datastore"
+# }
 
-output "metaflow_kms_s3_policy_arn" {
-  value       = aws_iam_policy.kms_s3.arn
-  description = "Policy grants access to the KMS key used to encrypt the Metaflow S3 bucket used for blob storage by the Datastore"
-}
+# output "metaflow_kms_s3_policy_arn" {
+#   value       = aws_iam_policy.kms_s3.arn
+#   description = "Policy grants access to the KMS key used to encrypt the Metaflow S3 bucket used for blob storage by the Datastore"
+# }
 
 output "METAFLOW_DATASTORE_SYSROOT_S3" {
   value       = "s3://${aws_s3_bucket.this.bucket}/metaflow"
